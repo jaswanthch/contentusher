@@ -1,0 +1,70 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --primary: #6366F1;
+  --primary-hover: #4F46E5;
+  --secondary: #E2E8F0;
+  --dark-text: #1E293B;
+  --light-bg: #F8FAFC;
+  --card-bg: #FFFFFF;
+  --border-color: #E2E8F0;
+}
+
+@layer base {
+  body {
+    @apply antialiased text-gray-800 bg-[var(--light-bg)];
+  }
+}
+
+@layer components {
+  .card-gradient {
+    background: linear-gradient(135deg, var(--card-bg) 0%, var(--light-bg) 100%);
+  }
+  
+  .input-focus {
+    @apply focus:ring-2 focus:ring-[var(--primary)] focus:border-transparent outline-none;
+  }
+
+  .glass-effect {
+    @apply bg-white/90 backdrop-blur-sm;
+  }
+
+  .button-gradient {
+    @apply bg-gradient-to-r from-[var(--primary)] to-[var(--primary-hover)];
+  }
+
+  .hover-gradient {
+    @apply hover:bg-[var(--primary-hover)] hover:text-white transition-all duration-300;
+  }
+
+  .primary-button {
+    @apply bg-[var(--primary)] hover:bg-[var(--primary-hover)] text-white font-semibold py-3 px-6 rounded-lg transition-colors disabled:bg-opacity-70;
+  }
+
+  .mint-tag {
+    @apply px-3 py-1.5 bg-indigo-50 text-indigo-600 rounded-full text-sm font-medium;
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.3s ease-out forwards;
+}
+
+.nav-glass {
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--border-color);
+}
