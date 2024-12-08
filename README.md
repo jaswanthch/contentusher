@@ -1,3 +1,1 @@
-# contentusher
-
-[Edit in StackBlitz next generation editor ⚡️](https://stackblitz.com/~/github.com/jaswanthch/contentusher)
+Content Usher for generating content using ai.
